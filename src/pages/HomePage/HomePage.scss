@@ -1,0 +1,73 @@
+.container {
+  max-width: 100%;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(240, 209, 170);
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 70px;
+    max-width: 100%;
+    width: 100%;
+    min-height: 580px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)),
+      url("../../assets/images/home-hero.png") no-repeat center center;
+    background-size: cover;
+
+    @media (max-width: 580px) {
+      padding: 30px 20px;
+    }
+
+    .home__title {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 42px;
+    }
+
+    .home__subtitle {
+      margin: 10px 0px 0px;
+      font-size: 16px;
+    }
+
+    .home__link {
+      display: inline-block;
+      margin: auto 0px 0px;
+      padding: 12px 25px;
+      width: 170px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: 700;
+      background-color: rgb(255, 139, 56);
+      cursor: pointer;
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .home-travel {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 18px 0px;
+    padding: 0px 70px;
+    width: 100%;
+
+    @media (max-width: 580px) {
+      padding: 0px 20px;
+    }
+
+    img {
+      display: block;
+      margin: 5px 0px;
+      max-width: 355px;
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+}

@@ -1,8 +1,16 @@
-# React + Vite
+# Создание Стартового Шаблона Проекта
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Создаем удаленный репозиторий с новым проектом.
+2. `Git clone https://github.com/JeckJonnyQ/(название репозитория).git` - клонируем удаленный репозиторий на локальную машину.
+3. `npm create vite@latest name-you-project -- --template react` - На ПК в папке с проектом создаем шаблон проекта React + Vite, выбирая нужные настройки (название проекта, js/ts и тд.).
+4. Удостовериться, что данный шаблон находится на одном уровне с инициализированным гитом (папка `.git`), если нет переносим содержимое шаблона на нужный уровень и прописываем `npm install` для установки зависимостей в корневой папке проекта.
 
-Currently, two official plugins are available:
+# Деплой Проекта на GH-PAGES
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+5. `npm install gh-pages --save-dev` - устанавливаем gh-pages в зависимости.
+6. В package.json прописываем `"homepage": "https://JeckJonnyQ.github.io/(название папки/проекта)"` с никнеймом гитхаба через домен io и название проекта.
+7. Далее прописываем в `"scripts" ----> "deploy": "npm run build && gh-pages -d dist"`, для создания ветки gh-pages при деплое проекта, где дист название папки со сбилдженым проектом.
+8. Прописать `base: "/(название папки/проекта)"` в Vite конфиге (путь к репозиторию с названием нашей папки/проекта)
+9. Удалить папку dist (если она уже создана)
+10. `npm run build` - (билдим проект).
+11. `npm run deploy` - (билдим проект на гх-пейджес).

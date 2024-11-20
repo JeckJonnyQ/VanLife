@@ -1,0 +1,57 @@
+.about-container {
+  background-color: rgb(240, 209, 170);
+
+  .about-page__bg {
+    background: url("../../assets//images/about-hero.png") no-repeat center
+      center;
+    background-size: cover;
+    max-width: 100%;
+    width: 100%;
+    min-height: 580px;
+  }
+
+  .about-page__content {
+    padding: 15px 70px;
+    background-color: rgb(255, 247, 237);
+
+    @media (max-width: 580px) {
+      padding: 30px 20px;
+    }
+
+    .about-page__content_title {
+      margin: 0px 0px 10px;
+    }
+
+    .about-page__content_desc {
+      line-height: 22px;
+      text-align: justify;
+    }
+  }
+
+  .about-page__cta {
+    margin: 15px 0px;
+    padding: 0px 70px;
+
+    @media (max-width: 580px) {
+      padding: 0px 20px;
+    }
+
+    .about-page__cta_text {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .about-page__cta_link-btn {
+      display: inline-block;
+      margin: 20px 0px 0px;
+      padding: 10px 10px;
+      border-radius: 5px;
+      background-color: rgb(22, 22, 22);
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

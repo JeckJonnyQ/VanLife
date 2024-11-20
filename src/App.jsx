@@ -1,7 +1,22 @@
-import "./App.css";
+import React from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import "./App.scss";
+
+import Navbar from "./components/Navbar/Navbar";
+import HomePage from "./pages/HomePage/HomePage";
+import AboutPage from "./pages/AboutPage/AboutPage";
 
 function App() {
-  return <div>Hello</div>;
+  return (
+    <BrowserRouter>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
