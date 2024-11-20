@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0px;
+  max-width: 100%;
+  width: 100%;
+  background-color: rgb(37, 37, 37);
+
+  .footer__text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: rgb(170, 170, 170);
+  }
+}

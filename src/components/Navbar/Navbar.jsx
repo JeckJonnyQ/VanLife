@@ -11,6 +11,10 @@ export default function Navbar() {
         <Link to="/about" className="header__nav_link">
           About
         </Link>
+
+        <Link to="/vans" className="header__nav_link">
+          Vans
+        </Link>
       </nav>
     </header>
   );
