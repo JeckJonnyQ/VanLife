@@ -1,3 +1,92 @@
-.vans {
-  background-color: bisque;
+.vans-container {
+  margin: 0px 0px 30px;
+  padding: 0px 70px;
+
+  @media (max-width: 580px) {
+    padding: 0px 20px;
+  }
+
+  .vans-container__title {
+    margin: 55px 0px 22px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 33px;
+    color: rgb(22, 22, 22);
+  }
+
+  .vans-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 30px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    .van-card {
+      img {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        border-radius: 5px;
+      }
+
+      .van-card__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        color: rgb(22, 22, 22);
+      }
+
+      .van-card__type {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 6px 26px;
+        border: none;
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: 500;
+        color: rgb(77, 77, 77);
+        background-color: rgb(255, 234, 208);
+        transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+
+        &:hover {
+          color: rgb(255, 234, 208);
+        }
+
+        &.selected {
+          color: rgb(255, 234, 208);
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &.simple:hover,
+        &.simple.selected {
+          background-color: rgb(225, 118, 84);
+        }
+
+        &.rugged:hover,
+        &.rugged.selected {
+          background-color: rgb(17, 94, 89);
+        }
+
+        &.luxury:hover,
+        &.luxury.selected {
+          background-color: rgb(22, 22, 22);
+        }
+
+        i[class*="`van-card__type-"] {
+          padding: 7px 14px;
+        }
+      }
+    }
+  }
 }

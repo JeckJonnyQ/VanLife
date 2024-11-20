@@ -8,6 +8,8 @@ import AboutPage from "./pages/AboutPage/AboutPage";
 import VansPage from "./pages/VansPage/VansPage";
 import Footer from "./components/Footer/Footer";
 
+import "./server";
+
 function App() {
   return (
     <BrowserRouter>

@@ -20,12 +20,14 @@
 
   .header__nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    max-width: 150px;
+    width: 100%;
 
     .header__nav_link {
       position: relative;
-      padding: 0px 10px;
+      margin-left: auto;
       font-weight: 600;
       color: rgb(77, 77, 77);
 
