@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./VansPage.scss";
 
 export default function VansPage() {
@@ -12,16 +13,21 @@ export default function VansPage() {
 
   const vanElements = vans.map((van) => (
     <div key={van.id} className="van-card">
-      <img src={van.imageUrl} />
+      <Link
+        to={`/vans/${van.id}`}
+        aria-label={`View details for ${van.name}, priced at $${van.price} per day`}
+      >
+        <img src={van.imageUrl} alt={`Image of ${van.name}`} />
 
-      <div className="van-card__info">
-        <h3 className="van-card__info_name">{van.name}</h3>
-        <p className="van-card__info_price">
-          ${van.price}
-          <span>/day</span>
-        </p>
-      </div>
-      <i className={`van-card__type ${van.type} selected`}>{van.type}</i>
+        <div className="van-card__info">
+          <h3 className="van-card__info_name">{van.name}</h3>
+          <p className="van-card__info_price">
+            ${van.price}
+            <span>/day</span>
+          </p>
+        </div>
+        <i className={`van-card__type ${van.type} selected`}>{van.type}</i>
+      </Link>
     </div>
   ));
 

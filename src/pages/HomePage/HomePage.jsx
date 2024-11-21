@@ -1,8 +1,6 @@
 import "./HomePage.scss";
 import { Link } from "react-router-dom";
-import ImgOne from "../../assets/images/home-img1.jpg";
-import ImgTwo from "../../assets/images/home-img2.jpg";
-import ImgThree from "../../assets/images/home-img3.jpg";
+import homeImages from "../../helpers/staticHomeImg";
 
 export default function HomePage() {
   return (
@@ -21,10 +19,17 @@ export default function HomePage() {
         </Link>
       </div>
 
-      <div className="home-travel">
-        <img src={ImgOne} alt="Vans photo" />
-        <img src={ImgTwo} alt="Vans photo" />
-        <img src={ImgThree} alt="Vans photo" />
+      <div className="home-wrap">
+        <h3 className="home-travel__title">
+          Thousands of our clients travel around the world for unforgettable
+          emotions and impressions!
+        </h3>
+
+        <div className="home-travel">
+          {homeImages.map((image) => (
+            <img key={image.id} src={image.src} alt={image.alt} />
+          ))}
+        </div>
       </div>
     </div>
   );
