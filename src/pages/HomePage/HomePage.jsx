@@ -1,6 +1,6 @@
 import "./HomePage.scss";
 import { Link } from "react-router-dom";
-import homeImages from "../../helpers/staticHomeImg";
+import homeImages from "../../static/staticHomeImg";
 
 export default function HomePage() {
   return (
