@@ -5,42 +5,44 @@ export default function HostLayout() {
   return (
     <>
       <nav className="host-nav">
-        <NavLink
-          to="/host"
-          end
-          className={({ isActive }) =>
-            isActive ? "host-nav__link active" : "host-nav__link"
-          }
-        >
-          Dashboard
-        </NavLink>
+        <div className="host-nav__container">
+          <NavLink
+            to="."
+            end
+            className={({ isActive }) =>
+              isActive ? "host-nav__link active" : "host-nav__link"
+            }
+          >
+            Dashboard
+          </NavLink>
 
-        <NavLink
-          to="/host/income"
-          className={({ isActive }) =>
-            isActive ? "host-nav__link active" : "host-nav__link"
-          }
-        >
-          Income
-        </NavLink>
+          <NavLink
+            to="income"
+            className={({ isActive }) =>
+              isActive ? "host-nav__link active" : "host-nav__link"
+            }
+          >
+            Income
+          </NavLink>
 
-        <NavLink
-          to="/host/vans"
-          className={({ isActive }) =>
-            isActive ? "host-nav__link active" : "host-nav__link"
-          }
-        >
-          Vans
-        </NavLink>
+          <NavLink
+            to="vans"
+            className={({ isActive }) =>
+              isActive ? "host-nav__link active" : "host-nav__link"
+            }
+          >
+            Vans
+          </NavLink>
 
-        <NavLink
-          to="/host/reviews"
-          className={({ isActive }) =>
-            isActive ? "host-nav__link active" : "host-nav__link"
-          }
-        >
-          Reviews
-        </NavLink>
+          <NavLink
+            to="reviews"
+            className={({ isActive }) =>
+              isActive ? "host-nav__link active" : "host-nav__link"
+            }
+          >
+            Reviews
+          </NavLink>
+        </div>
       </nav>
       <Outlet />
     </>
