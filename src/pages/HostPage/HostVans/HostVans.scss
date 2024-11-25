@@ -1,0 +1,51 @@
+.host-vans {
+  max-width: 100%;
+  width: 100%;
+
+  .host-vans__title {
+    margin: 0px 0px 32px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 33px;
+  }
+
+  .host-vans__list {
+    max-width: 100%;
+    width: 100%;
+
+    .host-vans__list-wrapper {
+      color: unset;
+      text-decoration: unset;
+
+      .host-vans__list_single {
+        display: flex;
+        align-items: center;
+        margin: 0px 0px 30px;
+        padding: 24px;
+        background-color: rgb(255, 255, 255);
+
+        img {
+          margin-right: 17px;
+          height: 130px;
+          border-radius: 5px;
+
+          @media (max-width: 580px) {
+            height: 100px;
+          }
+        }
+
+        .host-van__info {
+          .host-van__info_name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-block: 10px;
+          }
+
+          .host-van__info_price {
+            margin-block: 10px;
+          }
+        }
+      }
+    }
+  }
+}
