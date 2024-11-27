@@ -3,12 +3,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px 70px;
+  padding: 0px 70px 45px;
   max-width: 100%;
   width: 100%;
 
   @media (max-width: 580px) {
-    padding: 0px 20px;
+    padding: 0px 20px 20px;
   }
 
   .back-button {
@@ -18,27 +18,57 @@
     text-align: start;
     text-decoration: underline;
     color: rgb(0, 0, 0);
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      display: none;
+    }
   }
 
   .host-van-detail-layout-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 24px;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
 
+    @media (max-width: 768px) {
+      padding: 12px;
+    }
+
     img {
       margin-right: 20px;
-      max-width: 280px;
+      max-width: 292px;
       width: 100%;
       border-radius: 5px;
+
+      @media (max-width: 768px) {
+        margin-right: 0px;
+        max-width: 100%;
+        width: 100%;
+      }
     }
 
     .host-van-detail {
       display: flex;
       align-items: center;
 
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+
       .host-van-detail-info-text {
+        @media (max-width: 768px) {
+          margin: 10px 0px 0px;
+          max-width: 100%;
+          width: 100%;
+          margin-right: 0px;
+        }
+
         .van-type {
           display: inline-block;
           padding: 6px 26px;
@@ -98,6 +128,19 @@
             font-weight: 400;
           }
         }
+      }
+    }
+
+    .host-van__nav {
+      display: flex;
+      justify-content: space-between;
+      margin: 27px 0px;
+      max-width: 240px;
+      width: 100%;
+
+      a {
+        font-weight: 500;
+        line-height: 20px;
       }
     }
   }

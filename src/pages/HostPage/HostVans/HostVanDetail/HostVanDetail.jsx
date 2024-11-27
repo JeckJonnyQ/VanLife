@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, NavLink, Outlet, useParams } from "react-router-dom";
 import "./HostVanDetail.scss";
 import { useEffect, useState } from "react";
 
@@ -11,8 +11,6 @@ export default function HostVanDetail() {
       .then((res) => res.json())
       .then((data) => setCurrentVan(data.vans));
   }, []);
-
-  console.log(currentVan);
 
   if (!currentVan) {
     return <h1>Loading...</h1>;
@@ -38,6 +36,16 @@ export default function HostVanDetail() {
             </h4>
           </div>
         </div>
+
+        <nav className="host-van__nav">
+          <NavLink to="." end>
+            Details
+          </NavLink>
+          <NavLink to="pricing">Pricing</NavLink>
+          <NavLink to="photos">Photos</NavLink>
+        </nav>
+
+        <Outlet context={{ currentVan }} />
       </div>
     </section>
   );

@@ -25,6 +25,12 @@
     }
 
     .van-card {
+      a {
+        &::before {
+          display: none;
+        }
+      }
+
       img {
         display: block;
         max-width: 100%;

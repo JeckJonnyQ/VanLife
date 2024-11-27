@@ -3,6 +3,10 @@
   max-width: 100%;
   width: 100%;
 
+  @media (max-width: 580px) {
+    padding: 0px 20px;
+  }
+
   .host-vans__title {
     margin: 0px 0px 32px;
     font-size: 32px;
@@ -18,10 +22,14 @@
       color: unset;
       text-decoration: unset;
 
+      &::before {
+        display: none;
+      }
+
       .host-vans__list_single {
         display: flex;
         align-items: center;
-        margin: 0px 0px 30px;
+        margin: 0px 0px 33px;
         padding: 24px;
         background-color: rgb(255, 255, 255);
 
