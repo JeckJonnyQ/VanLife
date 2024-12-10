@@ -1,18 +1,16 @@
 import { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, useLoaderData } from "react-router-dom";
 import "./VansPage.scss";
+import { getVans } from "../../api/api";
+
+export function loader() {
+  return getVans();
+}
 
 export default function VansPage() {
-  const [vans, setVans] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
-
+  const vans = useLoaderData();
   const typeFilter = searchParams.get("type");
-
-  useEffect(() => {
-    fetch("/api/vans")
-      .then((res) => res.json())
-      .then((data) => setVans(data.vans));
-  }, []);
 
   const displayedVans = typeFilter
     ? vans.filter((van) => van.type === typeFilter)

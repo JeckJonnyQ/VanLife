@@ -1,0 +1,14 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
+  min-height: calc(100vh - 84px - 82px);
+
+  .error__name {
+    margin: 0px 0px 10px;
+    font-size: 32px;
+  }
+}

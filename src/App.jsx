@@ -9,11 +9,12 @@ import "./App.css";
 
 import Layout from "./components/Layout/Layout";
 import HostLayout from "./components/HostLayout/HostLayout";
+import Error from "./components/Error/Error";
 
 import HomePage from "./pages/HomePage/HomePage";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
-import VansPage from "./pages/VansPage/VansPage";
+import VansPage, { loader as vansPageLoader } from "./pages/VansPage/VansPage";
 
 import VanDetail from "./pages/VansPage/VanDetail/VanDetail";
 import Dashboard from "./pages/HostPage/Dashboard/Dashboard";
@@ -27,7 +28,6 @@ import HostVanPricing from "./pages/HostPage/HostVans/HostVanDetail/HostVanPrici
 import HostVanPhotos from "./pages/HostPage/HostVans/HostVanDetail/HostVanPhotos/HostVanPhotos";
 
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
-
 import "./server";
 
 const router = createBrowserRouter(
@@ -40,7 +40,7 @@ const router = createBrowserRouter(
         path="vans"
         element={<VansPage />}
         errorElement={<Error />}
-        // loader={vansLoader}
+        loader={vansPageLoader}
       />
       <Route path="vans/:id" element={<VanDetail />} />
 
